@@ -20,7 +20,7 @@ a {
 .top {
     background-color: $color-bg;
     padding-top: 196px;
-    padding-bottom: 156px;
+    padding-bottom: 246px;
     position: relative;
     &__title {
         color: $color-base;
@@ -92,11 +92,44 @@ a {
     }
 }
 .stripe {
-
+    position: absolute; // Чтобы "бегущая полоса" была выше svg-файла большой звезды
+    background-color: #BCEC30;
+    padding: 27px 49px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 51px;
+    align-items: center;
     &__text {
         color: $color-base;
         font-size: 30px;
         font-weight: 700;
         line-height: 110%;
+        white-space: nowrap
+    }
+}
+.about {
+    background-color: $color-base;
+    margin-top: 90px;
+    padding-top: 94px;
+    padding-bottom: 96px;
+    position: relative;
+    &__star {
+        position: absolute;
+        top: 105px;
+        right: 0px;
+    }
+    &__title {
+        color: $color-text;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+    }
+    &__desc {
+        color: $color-text;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-top: 24px;
     }
 }
