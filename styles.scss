@@ -112,7 +112,7 @@ a {
     background-color: $color-base;
     margin-top: 90px;
     padding-top: 94px;
-    padding-bottom: 96px;
+    padding-bottom: 50px;
     position: relative;
     &__star {
         position: absolute;
@@ -131,5 +131,37 @@ a {
         font-weight: 400;
         line-height: 32px;
         padding-top: 24px;
+        padding-bottom: 72px;
+    }
+}
+.card {
+    background-color: $color-text;
+    max-width: 378px;
+    border-radius: 30px;
+    &__image {
+        border-radius: 30px;
+    }
+    &__name-box {
+        padding: 32px 32px 36px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__number {
+        color: $color-base;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        box-sizing: border-box;
+        padding: 10px 16px;
+        border-radius: 52.58px;
+        background-color: #F7F7F7;
+        max-width: 108px;
+    }
+    &__name {
+        color: $color-base;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
     }
 }
