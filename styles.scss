@@ -113,12 +113,9 @@ a {
     margin-top: 90px;
     padding-top: 94px;
     padding-bottom: 50px;
-    position: relative;
-    &__star {
-        position: absolute;
-        top: 105px;
-        right: 0px;
-    }
+    background-image: url(./images/star-about.svg);
+    background-repeat: no-repeat;
+    background-position: right -116px top 108px;
     &__title {
         color: $color-text;
         font-size: 64px;
@@ -134,10 +131,18 @@ a {
         padding-bottom: 72px;
     }
 }
+.card-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+}
 .card {
     background-color: $color-text;
     max-width: 378px;
     border-radius: 30px;
+    margin-top: auto;
     &__image {
         border-radius: 30px;
     }
