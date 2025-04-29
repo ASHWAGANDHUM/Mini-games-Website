@@ -20,8 +20,11 @@ a {
 .top {
     background-color: $color-bg;
     padding-top: 196px;
-    padding-bottom: 246px;
+    padding-bottom: 156px;
     position: relative;
+    background-image: url(./images/star5.svg);
+    background-repeat: no-repeat;
+    background-position: right -495px bottom -84px;
     &__title {
         color: $color-base;
         font-size: 64px;
@@ -84,15 +87,9 @@ a {
             top: 568px;
             right: 344px;
         }
-        &:nth-child(5) {
-            position: absolute;
-            bottom: -87px;
-            right: -495px;
-        }
     }
 }
 .stripe {
-    position: absolute; // Чтобы "бегущая полоса" была выше svg-файла большой звезды
     background-color: #BCEC30;
     padding: 27px 49px;
     display: flex;
@@ -110,7 +107,6 @@ a {
 }
 .about {
     background-color: $color-base;
-    margin-top: 90px;
     padding-top: 94px;
     padding-bottom: 50px;
     background-image: url(./images/star-about.svg);
@@ -135,14 +131,13 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 32px;
     align-items: flex-start;
+    gap: 32px;
 }
 .card {
     background-color: $color-text;
     max-width: 378px;
     border-radius: 30px;
-    margin-top: auto;
     &__image {
         border-radius: 30px;
     }
@@ -168,5 +163,8 @@ a {
         font-size: 32px;
         font-weight: 700;
         line-height: 39px;
+    }
+    &_pos {
+        margin-top: -39px;
     }
 }
