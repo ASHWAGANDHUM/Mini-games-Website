@@ -147,6 +147,9 @@ a {
 .card__image {
   border-radius: 30px;
 }
+.card__image_fist {
+  position: relative;
+}
 .card__name-box {
   padding: 32px 32px 36px 32px;
   display: flex;
@@ -170,6 +173,6 @@ a {
   font-weight: 700;
   line-height: 39px;
 }
-.card_pos {
+.card_stretch {
   margin-top: -39px;
 }/*# sourceMappingURL=styles.css.map */

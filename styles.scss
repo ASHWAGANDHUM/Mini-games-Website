@@ -140,6 +140,9 @@ a {
     border-radius: 30px;
     &__image {
         border-radius: 30px;
+        &_fist {
+            position: relative;
+        }
     }
     &__name-box {
         padding: 32px 32px 36px 32px;
@@ -164,7 +167,7 @@ a {
         font-weight: 700;
         line-height: 39px;
     }
-    &_pos {
+    &_stretch {
         margin-top: -39px;
     }
 }
