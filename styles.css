@@ -21,13 +21,11 @@ a {
 }
 
 .top {
-  background-color: #E1FF8F;
   padding-top: 196px;
   padding-bottom: 156px;
   position: relative;
-  background-image: url(./images/star5.svg);
-  background-repeat: no-repeat;
-  background-position: right -495px bottom -84px;
+  background: url(./images/star1.svg) top 94px left 63px no-repeat, url(./images/star2.svg) top 69px left 156px no-repeat, url(./images/star3.svg) top 538px right 455px no-repeat, url(./images/star4.svg) top 568px right 344px no-repeat, url(./images/star5.svg) right -495px bottom -84px no-repeat;
+  background-color: #E1FF8F;
 }
 .top__title {
   color: #202027;
@@ -65,26 +63,6 @@ a {
   border: 1px solid #000000;
   background-color: transparent;
   color: #000000;
-}
-.top__star:nth-child(1) {
-  position: absolute;
-  top: 94px;
-  left: 63px;
-}
-.top__star:nth-child(2) {
-  position: absolute;
-  top: 69px;
-  left: 156px;
-}
-.top__star:nth-child(3) {
-  position: absolute;
-  top: 538px;
-  right: 455px;
-}
-.top__star:nth-child(4) {
-  position: absolute;
-  top: 568px;
-  right: 344px;
 }
 
 .stripe {
