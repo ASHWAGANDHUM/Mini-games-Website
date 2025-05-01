@@ -82,12 +82,12 @@ a {
     }
 }
 .about {
-    background-color: $color-base;
     padding-top: 94px;
     padding-bottom: 50px;
-    background-image: url(./images/star-about.svg);
-    background-repeat: no-repeat;
-    background-position: right -116px top 108px;
+    background: url(./images/star-about-1.svg) top 108px right -142px no-repeat,
+                url(./images/star-about-2.svg) top 770px left 25px no-repeat,
+                url(./images/star-about-3.svg) top 822px left 40px no-repeat;
+    background-color: $color-base;
     &__title {
         color: $color-text;
         font-size: 64px;
