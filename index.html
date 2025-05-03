@@ -12,8 +12,8 @@
 <body>
 <div class="top center">
     <h1 class="top__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
-    <p class="top__text">Тебе предстоит пройти несколько увлекательных игр.<br>Если готов, нажимай <a href="#games" class="top__text-link">«Поехали!»</a> и <a href="#" class="top__text-link">приступай.</a></p>
-    <a href="#games"><button class="top__button">Поехали!</button></a>
+    <p class="top__text">Тебе предстоит пройти несколько увлекательных игр.<br>Если готов, нажимай <a href="#about" class="top__text-link">«Поехали!»</a> и <a href="#games" class="top__text-link">приступай.</a></p>
+    <a href="#about"><button class="top__button">Поехали!</button></a>
 </div>
 <div class="stripe">
     <span class="stripe__text">ВИКТОРИНА</span>
@@ -29,12 +29,12 @@
     <span class="stripe__text">ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</span>
     <img class="stripe__img" src="./images/stripe-star.svg" alt="Stripe star">
 </div>
-<section class="about center">
+<section class="about center" id="about">
     <h2 class="about__title">Об играх</h1>
     <p class="about__desc">В моей коллекции представлено 6 игр на разные темы.<br>
     Игры несложные — в них может поиграть каждый.<br>
     Все игры доступны для пользования.</p>
-    <div class="about__content" id="games">
+    <div class="about__content">
         <a href="#"><article class="card">
             <div class="card__image"><img src="./images/cover1.svg" alt="Обложка"></div>
             <div class="card__info">
@@ -79,7 +79,7 @@
         </article></a>
     </div>
 </section>
-<section class="games center">
+<section class="games center" id="games">
     <h2 class="games__title">Мини-игры</h2>
     <div class="games__content">
         <article class="game">
@@ -138,5 +138,3 @@
 
 </body>
 </html>
-
-<!-- <img class="card__image-fist" src="./images/fist.png" alt="Кулак"> -->
