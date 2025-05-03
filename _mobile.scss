@@ -1,0 +1,48 @@
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .top {
+        padding-top: 147px;
+        padding-bottom: 131px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        background: url(./images/star-mobile1.svg) top 91px left 37px no-repeat,
+                    url(./images/star-mobile2.svg) top 64px left 91px no-repeat,
+                    url(./images/star-mobile3.svg) bottom 74px right 86px no-repeat,
+                    url(./images/star-mobile4.svg) bottom 28px right 34px no-repeat,
+                    url(./images/star-mobile5.svg) top -84px right -92px no-repeat;
+        background-color: $color-bg;
+        &__title {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 49px;
+            text-align: center;
+        }
+        &__text {
+            color: $color-base;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            // padding-top: 24px; логично было бы снизить на 1/4 - т.е. до 16px
+            padding-bottom: 36px;
+            text-align: center;
+        }
+        &__button {
+            padding: 16px 84px;
+        }
+    }
+    .stripe {
+        padding: 17px 18px;
+        gap: 27px;
+        &__text {
+            font-size: 16px;
+        }
+        &__img {
+            width: 20px;
+        }
+    }
+}
