@@ -195,6 +195,10 @@ a {
         font-weight: 400;
         line-height: 32px;
         padding-bottom: 36px;
+        padding-right: 130px;
+        &_last {
+            padding-right: 62px;
+        }
     }
     &__button {
         box-sizing: border-box;
@@ -224,7 +228,7 @@ a {
     background-color: $color-footer;
     padding-top: 61px;
     padding-bottom: 60px;
-    &__copyright {
+    &__text {
         color: $color-base;
         font-size: 24px;
         font-weight: 600;
