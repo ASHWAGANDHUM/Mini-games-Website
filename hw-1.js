@@ -7,3 +7,8 @@
 
  const year = 2007;
  alert(year);
+
+  // Задание 3. Создайте переменную и присвойте ей значение имени создателя языка JavaScript. Выведите значение переменной на экран.
+
+  const userName = 'Steve Jobs';
+  alert(userName);
