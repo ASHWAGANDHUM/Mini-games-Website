@@ -26,3 +26,10 @@
 
   let result = 2 ** 5;
   alert(result);
+
+  // Задание 6. Даны переменные: a = 9 и b = 2. Найдите остаток от деления a на b и выведите результат на экран с помощью метода alert().
+
+  let a1 = 9;
+  let b1 = 2;
+  let remainder = a1 % b1;
+  alert(remainder);
