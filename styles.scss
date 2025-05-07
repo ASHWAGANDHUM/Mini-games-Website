@@ -18,18 +18,20 @@ a {
     padding-right: calc(50% - 600px);
 }
 .top {
-    background-color: $color-bg;
     padding-top: 196px;
     padding-bottom: 156px;
-    position: relative;
-    background-image: url(./images/star5.svg);
-    background-repeat: no-repeat;
-    background-position: right -495px bottom -84px;
+    background: url(./images/star1.svg) top 94px left 63px no-repeat,
+                url(./images/star2.svg) top 69px left 156px no-repeat,
+                url(./images/star3.svg) bottom 135px right 455px no-repeat,
+                url(./images/star4.svg) bottom 59px right 344px no-repeat,
+                url(./images/star5.svg) bottom -84px right -495px no-repeat;
+    background-color: $color-bg;
     &__title {
         color: $color-base;
         font-size: 64px;
         font-weight: 700;
         line-height: 78px;
+        max-width: 768px;
     }
     &__text {
         color: $color-base;
@@ -38,6 +40,7 @@ a {
         line-height: 32px;
         padding-top: 24px;
         padding-bottom: 48px;
+        max-width: 720px;
     }
     &__text-link {
         font-weight: bold;
@@ -48,7 +51,8 @@ a {
         border: 1px solid $color-base;
         border-radius: 60px;
         background-color: $color-base;
-        color: rgb(255, 255, 255);
+        color: $color-text;
+        font-family: inherit;
         font-size: 24px;
         font-weight: 600;
         line-height: 141.69%;
@@ -57,37 +61,15 @@ a {
         cursor: pointer;
         transition: 1s ease;
         &:hover {
-            border: 1px solid #000000;
+            border: 1px solid $color-base;
             background-color: transparent;
-            color: #000000;
-        }
-    }
-    &__star {
-        &:nth-child(1) {
-            position: absolute;
-            top: 94px;
-            left: 63px;
-        }
-        &:nth-child(2) {
-            position: absolute;
-            top: 69px;
-            left: 156px;
-        }
-        &:nth-child(3) {
-            position: absolute;
-            top: 538px;
-            right: 455px;
-        }
-        &:nth-child(4) {
-            position: absolute;
-            top: 568px;
-            right: 344px;
+            color: $color-base;
         }
     }
 }
 .stripe {
-    background-color: #BCEC30;
-    padding: 27px 49px;
+    background-color: $color-stripe;
+    padding: 27px 18px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -98,16 +80,16 @@ a {
         font-size: 30px;
         font-weight: 700;
         line-height: 110%;
-        white-space: nowrap
+        white-space: nowrap;
     }
 }
 .about {
-    background-color: $color-base;
     padding-top: 94px;
     padding-bottom: 50px;
-    background-image: url(./images/star-about.svg);
-    background-repeat: no-repeat;
-    background-position: right -116px top 108px;
+    background: url(./images/star-about-1.svg) top 108px right -142px no-repeat,
+                url(./images/star-about-2.svg) top 770px left 25px no-repeat,
+                url(./images/star-about-3.svg) top 822px left 40px no-repeat;
+    background-color: $color-base;
     &__title {
         color: $color-text;
         font-size: 64px;
@@ -122,25 +104,24 @@ a {
         padding-top: 24px;
         padding-bottom: 72px;
     }
-}
-.card-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 32px;
+    &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 32px;
+    }
 }
 .card {
     background-color: $color-text;
     max-width: 378px;
     border-radius: 30px;
     &__image {
-        border-radius: 30px;
         &_fist {
             position: relative;
         }
     }
-    &__name-box {
+    &__info {
         padding: 32px 32px 36px 32px;
         display: flex;
         flex-direction: column;
@@ -162,8 +143,102 @@ a {
         font-size: 32px;
         font-weight: 700;
         line-height: 39px;
+        max-width: 300px;
     }
     &_stretch {
-        margin-top: -39px;
+        margin-top: -39px; // растягивание левой и правой карточек
     }
 }
+.games {
+    padding-top: 46px;
+    padding-bottom: 144px;
+    background: url(./images/star-games-top-1.svg) top 93px right 124px no-repeat,
+                url(./images/star-games-top-2.svg) top 126px right 45px no-repeat,
+                url(./images/star-games-bottom-1.svg) bottom 65px right 52px no-repeat,
+                url(./images/star-games-bottom-2.svg) bottom 45px right 150px no-repeat;
+    background-color: $color-base;
+    &__title {
+        color: $color-text;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+    }
+    &__content {
+        padding-top: 72px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+}
+.game {
+    background-color: $color-text;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &:nth-child(2n) {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    &__info {
+        padding-top: 48px;
+        padding-left: 48px;
+    }
+    &__name {
+        color: $color-base;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 59px;
+        padding-bottom: 24px;
+        max-width: 450px;
+    }
+    &__desc {
+        color: $color-base;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-bottom: 36px;
+        max-width: 420px;
+        &_last {
+            max-width: 496px;
+        }
+    }
+    &__button {
+        box-sizing: border-box;
+        border: 1px solid $color-base;
+        border-radius: 60px;
+        background-color: $color-base;
+        color: $color-text;
+        font-family: inherit;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 141.69%;
+        padding: 16px 75.5px;
+        text-align: center;
+        cursor: pointer;
+        transition: 1s ease;
+        &:hover {
+            border: 1px solid $color-base;
+            background-color: transparent;
+            color: $color-base;
+        }
+    }
+    &__image {
+        // width: 100%;
+    }
+}
+.footer {
+    background-color: $color-footer;
+    padding-top: 61px;
+    padding-bottom: 60px;
+    &__text {
+        color: $color-base;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+    }
+}
+
+@import 'mobile';
