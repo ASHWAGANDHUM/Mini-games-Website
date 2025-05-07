@@ -31,6 +31,7 @@ a {
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
+  max-width: 768px;
 }
 .top__text {
   color: #202027;
@@ -39,6 +40,7 @@ a {
   line-height: 32px;
   padding-top: 24px;
   padding-bottom: 48px;
+  max-width: 720px;
 }
 .top__text-link {
   font-weight: bold;
@@ -140,6 +142,7 @@ a {
   font-size: 32px;
   font-weight: 700;
   line-height: 39px;
+  max-width: 300px;
 }
 .card_stretch {
   margin-top: -39px;
@@ -186,6 +189,7 @@ a {
   font-weight: 700;
   line-height: 59px;
   padding-bottom: 24px;
+  max-width: 450px;
 }
 .game__desc {
   color: #202027;
@@ -193,10 +197,10 @@ a {
   font-weight: 400;
   line-height: 32px;
   padding-bottom: 36px;
-  padding-right: 130px;
+  max-width: 420px;
 }
 .game__desc_last {
-  padding-right: 62px;
+  max-width: 496px;
 }
 .game__button {
   box-sizing: border-box;
@@ -251,6 +255,7 @@ a {
     font-weight: 700;
     line-height: 49px;
     text-align: center;
+    max-width: 262px;
   }
   .top__text {
     color: #202027;
@@ -259,6 +264,7 @@ a {
     line-height: 20px;
     padding-bottom: 36px;
     text-align: center;
+    max-width: 296px;
   }
   .top__button {
     padding: 16px 84px;
@@ -315,7 +321,10 @@ a {
     font-weight: 400;
     line-height: 20px;
     padding-bottom: 32px;
-    padding-right: 40px;
+    max-width: 272px;
+  }
+  .game__desc_last {
+    max-width: 244px;
   }
   .game__button {
     padding: 16px 110.5px;
