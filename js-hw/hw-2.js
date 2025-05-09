@@ -2,3 +2,7 @@
 let password = 'qwerty';
 let answer = prompt('Введите пароль');
 alert(answer === password ? 'Пароль введён верно' : 'Пароль введён неверно');
+// Задание 2
+let c = 2;
+console.log(c > 0 && c < 10 ? 'Верно' : 'Неверно');
+// Задание 3
