@@ -39,4 +39,5 @@ switch (Number(monthNumber)) {
         break;
     default:
         console.log('Такого месяца не существует.');
+        break;
 }
