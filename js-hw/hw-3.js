@@ -29,3 +29,15 @@ const obj = {
 for (const key in obj) {
     console.log(`${key} — з/п ${obj[key]} долларов`);
 }
+
+// Задание 5
+
+let n = 1000;
+let num = 0;
+while (n >= 50) {
+    n /= 2;
+    console.log(n); // Отслеживание результатов каждой итерации
+    num++;
+}
+console.log(`В результате получилось число ${n}`);
+console.log(`Количество итераций составило ${num}`);
