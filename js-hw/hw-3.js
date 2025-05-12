@@ -1,6 +1,11 @@
 // Задание 1
 
-let i = 0;
 for (let i = 0; i < 2; i++) {
     console.log('Привет');
+}
+
+// Задание 2
+
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
 }
