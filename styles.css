@@ -117,6 +117,10 @@ a {
   background-color: #FFFFFF;
   max-width: 378px;
   border-radius: 30px;
+  transition: 0.8s;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 .card__image_fist {
   position: relative;

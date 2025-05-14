@@ -1,3 +1,16 @@
+const button = document.getElementById('smart-button');
+button.addEventListener('click', function () {
+  if (window.matchMedia('(min-width: 768px)').matches) {
+    document.getElementById('about').scrollIntoView({
+      behavior: 'smooth'
+    });
+  } else {
+    document.getElementById('games').scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+});
+
 function guessNumberGame() {
     alert('Отлично. Ты выбрал игру "Угадай число"! Нажми ОК, чтобы начать.');
     const hiddenNumber = Math.floor(Math.random() * 100) + 1;
