@@ -24,13 +24,13 @@ alert(isEven(checkNumber));
 // Задание 3
 
 function outputSquare(n) {
-    let square = n * n; // Локальная переменная, функция ниже её не увидит
+    let square = n ** 2; // Локальная переменная, функция ниже её не увидит
     console.log(`Квадрат параметра равен ${square}.`);
 }
 outputSquare(4);
 
 function returnSquare(n) {
-    let square = n * n; // Локальная переменная, функция выше её не увидит
+    let square = n ** 2; // Локальная переменная, функция выше её не увидит
     return square;
 }
 let sum = returnSquare(5) + 5;
@@ -53,7 +53,7 @@ alert(userAge());
 
 // Задание 5
 
-function correctNumbers(a, b) {
+function multCorrectNumbers(a, b) {
     if (isNaN(a) || isNaN(b)) {
         return 'Одно или оба значения не являются числом.';
     }
@@ -64,4 +64,18 @@ function correctNumbers(a, b) {
 let a = Number(prompt('Введите первое число'));
 let b = Number(prompt('Введите второе число'));
 
-alert(correctNumbers(a, b));
+alert(multCorrectNumbers(a, b));
+
+// Задание 6
+
+function cubeCorrectNumbers(n) {
+    if (isNaN(n)) {
+        return 'Переданный параметр не является числом';
+    }
+    let cube = n ** 3;
+    return `${n} в кубе равняется ${cube}.`;
+}
+
+let n = Number(prompt('Введите число'));
+
+alert(cubeCorrectNumbers(n));
