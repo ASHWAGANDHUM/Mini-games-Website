@@ -1,12 +1,6 @@
 // Задание 1
 
-function minOfTwo(a, b) {
-    if (a <= b) {
-        return a;
-    } else {
-        return b;
-    }
-}
+const minOfTwo = (a, b) => (a <= b ? a : b);
 
 let firstNumber = Number(prompt('Введите первое число'));
 let secondNumber = Number(prompt('Введите второе число'));
@@ -44,7 +38,8 @@ console.log(`К вернувшемуся значению ${returnSquare(5)} м�
 
 // Задание 4
 
-function userAge(age) {
+function userAge() {
+    let age = Number(prompt('Сколько вам лет?'));
     while (age < 0 || isNaN(age)) {
         age = Number(prompt('Вы ввели некорректное значение! Попробуйте еще раз.'));
     }
@@ -54,5 +49,19 @@ function userAge(age) {
         return 'Добро пожаловать!';
     }
 }
-let age = Number(prompt('Сколько вам лет?'));
-alert(userAge(age));
+alert(userAge());
+
+// Задание 5
+
+function correctNumbers(a, b) {
+    if (isNaN(a) || isNaN(b)) {
+        return 'Одно или оба значения не являются числом.';
+    }
+    let mult = a * b;
+    return `Произведение чисел ${a} и ${b} составляет ${mult}.`;
+}
+
+let a = Number(prompt('Введите первое число'));
+let b = Number(prompt('Введите второе число'));
+
+alert(correctNumbers(a, b));
