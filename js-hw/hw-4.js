@@ -79,3 +79,29 @@ function cubeCorrectNumbers(n) {
 let n = Number(prompt('Введите число'));
 
 alert(cubeCorrectNumbers(n));
+
+// Задание 7
+
+function getRoundArea() {
+    return Math.PI * this.radius ** 2;
+}
+function getRoundPerimeter() {
+    return Math.PI * this.radius * 2;
+}
+
+const circle1 = {
+    radius: 10,
+    getArea: getRoundArea,
+    getPerimeter: getRoundPerimeter,
+};
+
+const circle2 = {
+    radius: 12,
+    getArea: getRoundArea,
+    getPerimeter: getRoundPerimeter,
+};
+
+console.log(circle1.getArea());
+console.log(circle1.getPerimeter());
+console.log(circle2.getArea());
+console.log(circle2.getPerimeter());
