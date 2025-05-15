@@ -19,13 +19,13 @@ function isEven(number) {
     return number % 2 === 0 ? `Число ${number} — чётное.`: `Число ${number} — нечётное.`;
 }
 
-let checkNumber = Number(prompt('Введите число.'));
+let checkNumber = Number(prompt('Введи число.'));
 
-if (isNaN(checkNumber)) {
-    alert('Это не число!');
-} else {
-    alert(isEven(checkNumber));
+while (isNaN(checkNumber)) {
+    checkNumber = Number(prompt('Это не число! Попробуй ещё раз.'));
 }
+
+alert(isEven(checkNumber));
 
 // Задание 3
 
@@ -41,3 +41,18 @@ function returnSquare(n) {
 }
 let sum = returnSquare(5) + 5;
 console.log(`К вернувшемуся значению ${returnSquare(5)} мы прибавили 5 и получили ${sum}.`);
+
+// Задание 4
+
+function userAge(age) {
+    while (age < 0 || isNaN(age)) {
+        age = Number(prompt('Вы ввели некорректное значение! Попробуйте еще раз.'));
+    }
+    if (age <= 12) {
+        return 'Привет, друг!';
+    } else {
+        return 'Добро пожаловать!';
+    }
+}
+let age = Number(prompt('Сколько вам лет?'));
+alert(userAge(age));
