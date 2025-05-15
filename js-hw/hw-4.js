@@ -7,8 +7,10 @@ function minOfTwo(a, b) {
         return b;
     }
 }
+
 let firstNumber = Number(prompt('Введите первое число'));
 let secondNumber = Number(prompt('Введите второе число'));
+
 alert(`Минимальное число: ${minOfTwo(firstNumber, secondNumber)}`);
 
 // Задание 2
@@ -16,9 +18,26 @@ alert(`Минимальное число: ${minOfTwo(firstNumber, secondNumber)}
 function isEven(number) {
     return number % 2 === 0 ? `Число ${number} — чётное.`: `Число ${number} — нечётное.`;
 }
+
 let checkNumber = Number(prompt('Введите число.'));
-    if (isNaN(checkNumber)) {
-        alert('Это не число!');
-    } else {
-        alert(isEven(checkNumber));
-    }
+
+if (isNaN(checkNumber)) {
+    alert('Это не число!');
+} else {
+    alert(isEven(checkNumber));
+}
+
+// Задание 3
+
+function outputSquare(n) {
+    let square = n * n; // Локальная переменная, функция ниже её не увидит
+    console.log(`Квадрат параметра равен ${square}.`);
+}
+outputSquare(4);
+
+function returnSquare(n) {
+    let square = n * n; // Локальная переменная, функция выше её не увидит
+    return square;
+}
+let sum = returnSquare(5) + 5;
+console.log(`К вернувшемуся значению ${returnSquare(5)} мы прибавили 5 и получили ${sum}.`);
