@@ -4,7 +4,6 @@
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -76,6 +75,7 @@ a {
   flex-wrap: nowrap;
   gap: 51px;
   align-items: center;
+  overflow-x: hidden;
 }
 .stripe__text {
   color: #202027;
@@ -227,6 +227,14 @@ a {
   background-color: transparent;
   color: #202027;
 }
+.game__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .footer {
   background-color: #BDED35;
   padding-top: 61px;
@@ -358,5 +366,43 @@ a {
     font-weight: 600;
     line-height: 20px;
     text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .card_stretch {
+    margin-top: 0px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1036px) {
+  .game__info {
+    padding-top: 29px;
+    padding-left: 29px;
+    padding-right: 29px;
+    padding-bottom: 32.67px;
+  }
+  .game__name {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    padding-bottom: 16px;
+  }
+  .game__button {
+    font-weight: 600;
+    line-height: 141.69%;
+  }
+}
+@media (min-width: 768px) and (max-width: 836px) {
+  .game__name_last {
+    font-size: 24px;
+  }
+  .game__desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-bottom: 32px;
+    max-width: 272px;
+  }
+  .game__desc_last {
+    max-width: 244px;
   }
 }/*# sourceMappingURL=styles.css.map */
