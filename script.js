@@ -3,11 +3,11 @@ button.addEventListener('click', function () {
   if (window.matchMedia('(min-width: 768px)').matches) {
     document.getElementById('about').scrollIntoView({
       behavior: 'smooth'
-    });
+    }); // скролл при нажатии на кнопку для десктопной версии (до блока "Об играх")
   } else {
     document.getElementById('games').scrollIntoView({
       behavior: 'smooth'
-    });
+    }); // скролл при нажатии на кнопку для мобильной версии сайта (до блока "Мини-игры")
   }
 });
 
