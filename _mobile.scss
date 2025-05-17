@@ -52,7 +52,7 @@
         }
     }
     .about {
-        display: none;
+        display: none; // для мобильной версии блок "Об играх" полностью скрыт
     }
     .games {
         padding-top: 48px;
@@ -125,10 +125,15 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1214px) {
+    .about {
+        &__content {
+            align-items: stretch;
+        }
+    }
     .card {
         &_stretch {
-            margin-top: 0px; // убрать растягивание левой и правой карточек
+            margin-top: 0px; // убрать растягивание левой и правой карточек при выстраивании их в две колонки (из-за сужения видимой области)
         }
     }
 }

@@ -109,22 +109,26 @@ a {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         align-items: flex-start;
         gap: 32px;
     }
+    // &__link {
+    //     display: block;
+    // }
 }
 .card {
     background-color: $color-text;
     max-width: 378px;
     border-radius: 30px;
     transition: 0.8s;
+    height: 100%;
     &:hover {
         transform: scale(1.05);
     }
     &__image {
-        &_fist {
-            position: relative;
-        }
+        display: block;
+        object-fit: contain;
     }
     &__info {
         padding: 32px 32px 36px 32px;
