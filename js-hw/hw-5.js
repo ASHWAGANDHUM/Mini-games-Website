@@ -9,3 +9,10 @@ for (let i = 0; i < arr.length; i++) {
     }
     console.log(arr[i]);
 }
+
+// Задание 2
+
+const numbers = [1, 5, 4, 10, 0, 3];
+let position = numbers.indexOf(4);
+console.log(position);
+
