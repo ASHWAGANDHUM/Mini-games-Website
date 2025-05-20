@@ -14,5 +14,10 @@ for (let i = 0; i < arr.length; i++) {
 
 const numbers = [1, 5, 4, 10, 0, 3];
 let position = numbers.indexOf(4);
-console.log(position);
+console.log(`${position}`);
 
+// Задание 3
+
+const numbs = [1, 3, 5, 10, 20];
+let joinNumbs = numbs.join(" ")
+console.log(joinNumbs);
