@@ -114,17 +114,37 @@ const baseArr = [
     [8, 9, 10],
 ];
 
-function squareArr(arr) {
+function square(arr) {
     if (!Array.isArray(arr) || arr.length === 0) {
         return null;
     }
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
-            arr[i][j] = arr[i][j] ** 2;
-        }
-    }
-    return arr;
+    return arr.map(subArr =>
+        subArr.map(number => number ** 2)
+    );
 }
 
-let squaredArr = squareArr(baseArr);
+const squaredArr = square(baseArr);
 console.log(squaredArr);
+
+// МОЁ ПЕРВОЕ РЕШЕНИЕ ЗАДАНИЯ 11
+
+// const baseArr = [
+//     [2, 3, 4],
+//     [5, 6, 7],
+//     [8, 9, 10],
+// ];
+
+// function squareArr(arr) {
+//     if (!Array.isArray(arr) || arr.length === 0) {
+//         return null;
+//     }
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < arr[i].length; j++) {
+//             arr[i][j] = arr[i][j] ** 2;
+//         }
+//     }
+//     return arr;
+// }
+
+// let squaredArr = squareArr(baseArr);
+// console.log(squaredArr);
