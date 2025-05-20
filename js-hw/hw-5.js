@@ -40,3 +40,11 @@ console.log(multArr);
 const shortArr = [1, 1, 1];
 shortArr.push(2, 2, 2);
 console.log(shortArr);
+
+// Задание 6
+
+const mixArr = [9, 8, 7, 'a', 6, 5];
+mixArr.sort();
+let deleted = mixArr.pop();
+console.log(`Элемент ${deleted} удалён из массива`); // просто проверка на возвращение элемента :)
+console.log(mixArr);
