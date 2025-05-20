@@ -85,7 +85,10 @@ console.log(string.split('').reverse().join(''));
 // Задание 9
 // Дан массив: [[1, 2, 3],[4, 5, 6]] . Выведите в консоль массив вида: [1, 2, 3, 4, 5, 6].
 
-const doubleArr = [[1, 2, 3],[4, 5, 6]];
+const doubleArr = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
 const joinArr = [...doubleArr[0], ...doubleArr[1]];
 console.log(joinArr);
 
@@ -101,3 +104,27 @@ for (let i = 0; i < numbersArr.length - 1; i++) {
     let sum = numbersArr[i] + numbersArr[i + 1];
     console.log(sum);
 }
+
+// Задание 11
+// Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив квадратов этих чисел.
+
+const baseArr = [
+    [2, 3, 4],
+    [5, 6, 7],
+    [8, 9, 10],
+];
+
+function squareArr(arr) {
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return null;
+    }
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = arr[i][j] ** 2;
+        }
+    }
+    return arr;
+}
+
+let squaredArr = squareArr(baseArr);
+console.log(squaredArr);
