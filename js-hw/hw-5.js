@@ -33,6 +33,7 @@ for (let i = 0; i < 3; i++) {
     }
     multArr.push(row);
 }
+
 console.log(multArr);
 
 // Задание 5
@@ -45,6 +46,18 @@ console.log(shortArr);
 
 const mixArr = [9, 8, 7, 'a', 6, 5];
 mixArr.sort();
-let deleted = mixArr.pop();
+let deleted = mixArr.pop(); // не то пальто - метод filter() нужен >_>
 console.log(`Элемент ${deleted} удалён из массива`); // просто проверка на возвращение элемента :)
 console.log(mixArr);
+
+// Задание 7
+
+const guessArr = [9, 8, 7, 6, 5];
+let guessNumber = Number(prompt('Угадай число, находящееся внутри массива.'))
+let answer = guessArr.includes(guessNumber);
+
+if (answer) {
+    alert('Угадал')
+} else {
+    alert('Не угадал')
+}
