@@ -21,3 +21,17 @@ console.log(`${position}`);
 const numbs = [1, 3, 5, 10, 20];
 let joinNumbs = numbs.join(" ")
 console.log(joinNumbs);
+
+// Задание 4
+
+const multArr = new Array(0); // условия нам диктуют сделать именно (матрицу в) 3 массива с 3 подмассивами (строками)?
+
+for (let i = 0; i < 3; i++) {
+    const row = new Array(0);
+    for (let j = 0; j < 3; j++) {
+        row.push(1);
+    }
+    multArr.push(row);
+}
+console.log(multArr);
+
