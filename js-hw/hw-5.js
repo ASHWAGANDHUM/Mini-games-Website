@@ -148,3 +148,18 @@ console.log(squaredArr);
 
 // let squaredArr = squareArr(baseArr);
 // console.log(squaredArr);
+
+// Задание 12
+// Создайте функцию, которая принимает на вход массив строк, а возвращает массив длины слов.
+
+const strings = ['git', 'branch', 'main']
+
+function findLength(arr) {
+    if (!Array.isArray || arr.length === 0) {
+        return null;
+        }
+    return arr.map(str => str.length);
+}
+
+const lengths = findLength(strings);
+console.log(lengths);
