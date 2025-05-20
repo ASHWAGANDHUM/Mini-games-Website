@@ -69,3 +69,9 @@ if (answer) {
 
 let string = 'abcdef';
 console.log(string.split('').reverse().join(''));
+
+// Задание 9
+
+const doubleArr = [[1, 2, 3],[4, 5, 6]];
+const joinArr = [...doubleArr[0], ...doubleArr[1]];
+console.log(joinArr);
