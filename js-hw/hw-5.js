@@ -46,9 +46,12 @@ console.log(shortArr);
 
 const mixArr = [9, 8, 7, 'a', 6, 5];
 mixArr.sort();
-let deleted = mixArr.pop(); // не то пальто - метод filter() нужен >_>
-console.log(`Элемент ${deleted} удалён из массива`); // просто проверка на возвращение элемента :)
-console.log(mixArr);
+const filteredArr = mixArr.filter(item => typeof item === 'number');
+console.log(filteredArr);
+
+// let deleted = mixArr.pop(); // первая попытка была решена таким методом, пока не заглянул в подсказки...
+// console.log(`Элемент ${deleted} удалён из массива`); // просто проверка на возвращение элемента :)
+// console.log(mixArr);
 
 // Задание 7
 
@@ -61,3 +64,8 @@ if (answer) {
 } else {
     alert('Не угадал')
 }
+
+// Задание 8
+
+let string = 'abcdef';
+console.log(string.split('').reverse().join(''));
