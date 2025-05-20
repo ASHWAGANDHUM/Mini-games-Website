@@ -35,3 +35,8 @@ for (let i = 0; i < 3; i++) {
 }
 console.log(multArr);
 
+// Задание 5
+
+const shortArr = [1, 1, 1];
+shortArr.push(2, 2, 2);
+console.log(shortArr);
