@@ -155,11 +155,32 @@ console.log(squaredArr);
 const strings = ['git', 'branch', 'main']
 
 function findLength(arr) {
-    if (!Array.isArray || arr.length === 0) {
+    if (!Array.isArray(arr) || arr.length === 0) {
         return null;
-        }
+    }
     return arr.map(str => str.length);
 }
 
 const lengths = findLength(strings);
 console.log(lengths);
+
+// Задание 13
+// Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив, содержащий только отрицательные значения.
+
+const numArr = [
+    [9, -14, 0, -55, 2, 78, 90, -1, -23],
+    [1, -49, 53, 35, 2, 78, -61, -1, 7],
+    [-12, 88, 0, 3, -42, 8, -96, -1, -38],
+    [80, 5, 62, -71, 27, 13, 39, -3, 11]
+];
+
+function getNegativeNums(arr) {
+    if (!Array.isArray || arr.length === 0) {
+        return null;
+    }
+    return arr.map(subArr =>
+        subArr.filter(numbers => numbers < 0)
+    );
+}
+const negativeNumArr = getNegativeNums(numArr);
+console.log(negativeNumArr);
