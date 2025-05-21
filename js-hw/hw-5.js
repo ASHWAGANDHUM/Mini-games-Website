@@ -179,8 +179,26 @@ function getNegativeNums(arr) {
         return null;
     }
     return arr.map(subArr =>
-        subArr.filter(numbers => numbers < 0)
+        subArr.filter(number => number < 0)
     );
 }
 const negativeNumArr = getNegativeNums(numArr);
 console.log(negativeNumArr);
+
+// Задание 14
+// Создайте массив, состоящий из 10 значений. Значения массива необходимо сгенерировать с помощью метода Math.random() в диапазоне от 0 до 10.
+// В данном массиве найдите все четные значения и добавьте их в новый массив. Результат работы программы необходимо вывести в консоль — это будут два массива: исходный массив и массив с четными значениями.
+
+function generateRandomArr(length) {
+    const randomNumbersArr = [];
+    for (let i = 0; i < length; i++) {
+        const randomNumber = Math.floor(Math.random() * 11);
+        randomNumbersArr.push(randomNumber);
+    }
+    return randomNumbersArr;
+}
+
+const randomArr = generateRandomArr(10); // Исходный массив с рандомными числами
+console.log(randomArr);
+const evenNumbersArr = randomArr.filter(number => number % 2 === 0); // Массив с четными значениями
+console.log(evenNumbersArr);
