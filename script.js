@@ -53,6 +53,7 @@ function simpleArithmetic() {
 
     const num1 = Math.floor(Math.random() * 100) + 1; // Случайное число от 1 до 100 для первого числа
     const num2 = Math.floor(Math.random() * 100) + 1; // Случайное число от 1 до 100 для второго числа
+    const num3 = Math.floor(Math.random() * 10) + 1; // Случайное число от 1 до 10 одного из чисел в случае умножения
     const operationsArr = ['+', '-', '*', '/']; // Набор (массив) математических символов
     const operation = operationsArr[Math.floor(Math.random() * operationsArr.length)]; // Случайный математический символ для арифметической задачи
 
@@ -69,12 +70,8 @@ function simpleArithmetic() {
       problem = `${num1} - ${num2}`;
       break;
       case '*':
-      if (num2 > 10) { // исключение трудных задач на умножение
-        i--; // не учитывать итерацию
-        continue;
-      }
-      answer = num1 * num2;
-      problem = `${num1} * ${num2}`;
+      answer = num1 * num3;
+      problem = `${num1} * ${num3}`;
       break;
       case '/':
       if (num2 === 0 || num1 % num2 !== 0) { // условие для исключения деления на 0 и ответов с нецелыми числами
