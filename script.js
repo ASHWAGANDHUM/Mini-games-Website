@@ -106,5 +106,9 @@ function simpleArithmetic() {
 
     countAnswer++;
   }
-  alert(`Ты дал ${correctAnswer} ответов из ${countAnswer}`);
+  if (correctAnswer === countAnswer) {
+    alert(`Поздравляю! Ты дал ${correctAnswer} ответов из ${countAnswer}!`);
+  } else {
+    alert(`Ты дал ${correctAnswer} ответов из ${countAnswer}.`);
+  }
 }
