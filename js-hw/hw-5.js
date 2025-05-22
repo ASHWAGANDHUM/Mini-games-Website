@@ -5,11 +5,10 @@
 const arr = [1, 5, 4, 10, 0, 3];
 
 for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
     if (arr[i] === 10) {
-        console.log(arr[i]);
         break
     }
-    console.log(arr[i]);
 }
 
 // Задание 2
@@ -89,7 +88,8 @@ const doubleArr = [
     [1, 2, 3],
     [4, 5, 6]
 ];
-const joinArr = [...doubleArr[0], ...doubleArr[1]];
+const joinArr = doubleArr.flat();
+// const joinArr = [...doubleArr[0], ...doubleArr[1]]; // как вариант
 console.log(joinArr);
 
 // Задание 10
@@ -152,7 +152,7 @@ console.log(squaredArr);
 // Задание 12
 // Создайте функцию, которая принимает на вход массив строк, а возвращает массив длины слов.
 
-const strings = ['git', 'branch', 'main']
+const strings = ['git', 'branch', 'main'];
 
 function findLength(arr) {
     if (!Array.isArray(arr) || arr.length === 0) {
