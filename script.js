@@ -44,7 +44,6 @@ function guessNumberGame() {
 // ИГРА 2 - ПРОСТАЯ АРИФМЕТИКА
 
 function simpleArithmetic() {
-
   alert('Отлично. Ты выбрал игру "Простая арифметика"! Будет 10 арифметических задач, на которые нужно дать ответ. Нажми ОК, чтобы начать.');
   let correctAnswer = 0; // счетчик верных ответов
   let countAnswer = 0; // счетчик ответов в общем (равно числу арифм.задач - 10)
@@ -111,4 +110,26 @@ function simpleArithmetic() {
   } else {
     alert(`Ты дал ${correctAnswer} ответов из ${countAnswer}.`);
   }
+}
+
+// ИГРА 3 - ПЕРЕВЕРНИ ТЕКСТ
+
+function reverseText() {
+  let text = prompt('Введи текст, который необходимо перевернуть.');
+
+  if (text === null) { // При нажатии Отмена или Esc
+    alert("Игра окончена.");
+    return;
+  }
+
+  while (!isNaN(text) || text === '') { // Проверка на корректный тип данных
+    text = prompt('Нужно ввести текст. Попробуй ещё раз!');
+      if (text === null) { // При нажатии Отмена или Esc
+      alert("Игра окончена.");
+      return;
+    }
+  }
+
+  let reversedText = text.toLowerCase().split('').reverse().join('');
+  alert(`Перевёрнутый текст получился таким: ${reversedText}!`);
 }
