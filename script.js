@@ -114,7 +114,7 @@ function simpleArithmetic() {
 
 // ИГРА 3 - ПЕРЕВЕРНИ ТЕКСТ
 
-function reverseText() {
+function reverseTextGame() {
   let text = prompt('Введи текст, который необходимо перевернуть.');
 
   if (text === null) { // При нажатии Отмена или Esc
@@ -131,5 +131,62 @@ function reverseText() {
   }
 
   let reversedText = text.toLowerCase().split('').reverse().join('');
-  alert(`Перевёрнутый текст получился таким: ${reversedText}!`);
+  alert(`Перевёрнутый текст получился таким: ${reversedText}`);
+}
+
+// ИГРА 4 (5?) - ПРОСТАЯ ВИКТОРИНА
+
+function easyQuizGame() {
+  const quiz = [
+    {
+        question: "Какой цвет у неба?",
+        options: ["1. Красный", "2. Синий", "3. Зеленый"],
+        correctAnswer: 2 // номер правильного ответа
+    },
+    {
+        question: "Сколько дней в неделе?",
+        options: ["1. Шесть", "2. Семь", "3. Восемь"],
+        correctAnswer: 2
+    },
+    {
+        question: "Сколько у человека пальцев на одной руке?",
+        options: ["1. Четыре", "2. Пять", "3. Шесть"],
+        correctAnswer: 2
+    }
+];
+  let countCorrectAnswers = 0;
+  for (let i = 0; i < quiz.length; i++) {
+    let answerUser = prompt(`${quiz[i].question}:\n${quiz[i].options.join(' ')}`);
+
+    if (answerUser === null) { // При нажатии Отмена или Esc
+      alert("Игра окончена.");
+      return;
+    }
+    // проверка на пустой ответ, либо пробелы
+    while (answerUser.trim() === '') {
+      answerUser = prompt(`Нужно ввести ответ. Попробуй ещё раз!\n\n${quiz[i].question}:\n${quiz[i].options.join(' ')}`);
+      if (answerUser === null) { // При нажатии Отмена или Esc
+        alert('Игра окончена.');
+        return
+      }
+    }
+
+    numericAnswer = Number(answerUser);
+    // переменная для строчного ответа
+    let correctTextAnswer = quiz[i].options[quiz[i].correctAnswer - 1].split('. ')[1].toLowerCase();
+
+    if (numericAnswer === quiz[i].correctAnswer || answerUser.trim().toLowerCase() === correctTextAnswer) {
+      alert('Верно!');
+      countCorrectAnswers++;
+    } else {
+      alert('Неверно!');
+    }
+  }
+  if (countCorrectAnswers === quiz.length) {
+    alert('Поздравляю! Ты ответил на все 3 вопроса!');
+  } else if (countCorrectAnswers === 0) {
+    alert('К сожалению, ты не ответил ни на один вопрос =(');
+  } else {
+    alert(`Ты ответил на ${countCorrectAnswers} вопроса из ${quiz.length}.`);
+  }
 }
