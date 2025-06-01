@@ -35,3 +35,11 @@ let maxNumber = Math.max(...numbers); // использован spread-опер�
 
 console.log(`Минимальное число - ${minNumber}, максимальное - ${maxNumber}`);
 
+// Задание 5. Создать функцию, которая выводит в консоль случайное число от 1 до 10.
+
+function getRandomNumber() {
+    let randomNumber = Math.round(Math.random() * 10);
+    console.log(randomNumber);
+}
+
+getRandomNumber();
