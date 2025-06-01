@@ -40,26 +40,9 @@ const persones = [ // т.к. переменная people уже занята
 
 console.log(filter(persones, isMale));
 
+// Задание 3. Напишите программу, которая на протяжении 30 секунд каждые 3 секунды будет выводить в консоль текущую дату. Последней строкой должно выводиться сообщение «30 секунд прошло».
 
+let currentDate = new Date();
 
-// function square(number) {
-//     return number ** 2;
-// }
-
-// function squareRoot(number) {
-//     return Math.sqrt(number);
-// }
-
-// function map(arr, ruleFunction) {
-//     const output = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         output.push(ruleFunction(arr[i]));
-//     }
-//     return output;
-// }
-
-// const input = [4, 9, 25, 16, 36, 49];
-// console.log(input);
-
-// console.log(map(input, square));
-// console.log(map(input, squareRoot));
+let timerId = setInterval (() => { console.log(currentDate); }, 3000);
+setTimeout(() => { clearInterval(timerId); console.log('30 секунд прошло'); }, 1000 * 30);
