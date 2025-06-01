@@ -56,3 +56,13 @@ function arrLimitRandomNumbers(number) {
 }
 
 console.log(arrLimitRandomNumbers(12));
+
+// Задание 7. Создать функцию, которая принимает два целых числа и возвращает случайное число в этом диапазоне.
+
+function getRandomNumberInRange(num1, num2) {
+    const min = Math.min(num1, num2);
+    const max = Math.max(num1, num2);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(getRandomNumberInRange(22, 38));
