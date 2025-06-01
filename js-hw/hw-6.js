@@ -16,3 +16,13 @@ function filterArrayByString(arr, str) {
 
 const filteredBeverages = filterArrayByString(beverages, 'Лимонад');
 console.log(filteredBeverages);
+
+// Задание 3. Округлить число 32.58884:
+// До меньшего целого.
+// До большего целого.
+// До ближайшего целого.
+
+let number = 32.58884;
+console.log(Math.floor(number));
+console.log(Math.ceil(number));
+console.log(Math.round(number));
