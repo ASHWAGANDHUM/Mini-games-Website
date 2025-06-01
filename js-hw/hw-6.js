@@ -69,5 +69,12 @@ console.log(getRandomNumberInRange(22, 38));
 
 // Задание 8. Выведите в консоль текущую дату
 
-now = new Date()
+let now = new Date();
 console.log(now.toLocaleDateString());
+
+// Задание 9. Создать переменную currentDate, хранящую текущую дату. Вывести дату, которая наступит через 73 дня после текущей.
+
+let currentDate = new Date();
+currentDate.setDate(currentDate.getDate() + 73);
+
+console.log(currentDate.toLocaleDateString());
