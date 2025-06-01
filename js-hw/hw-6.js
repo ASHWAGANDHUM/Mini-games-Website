@@ -77,4 +77,36 @@ console.log(now.toLocaleDateString());
 let currentDate = new Date();
 currentDate.setDate(currentDate.getDate() + 73);
 
-console.log(currentDate.toLocaleDateString());
+console.log(`Через 73 дня будет дата: ${currentDate.toLocaleDateString()}`);
+
+// Задание 10. Написать функцию, которая принимает дату и возвращает ее в формате:
+// Дата: [число] [месяц на русском] [год] — это [день недели на русском].
+// Время: [часы]:[минуты]:[секунды].
+
+function getFormattedDate(date) {
+    let options = {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        weekday: 'long'
+    }
+    let weekOption = {
+        weekday: 'long'
+    }
+    let timeOptions = {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    }
+    const formattedDate = date.toLocaleDateString('ru-RU', options);
+    const dayOfWeek = date.toLocaleDateString('ru-RU', weekOption);
+    const formattedTime = date.toLocaleTimeString('ru-RU', timeOptions);
+
+    console.log(`Дата: ${formattedDate} - это ${dayOfWeek}\nВремя: ${formattedTime}.`);
+}
+
+let nowDate = new Date;
+getFormattedDate(nowDate);
+
+let specificDate = new Date(2026, 4, 10);
+getFormattedDate(specificDate);
