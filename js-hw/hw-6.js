@@ -26,3 +26,12 @@ let number = 32.58884;
 console.log(Math.floor(number));
 console.log(Math.ceil(number));
 console.log(Math.round(number));
+
+// Задание 4. Найти минимальное и максимальное значения из чисел 52, 53, 49, 77, 21, 32 и вывести их в консоль.
+
+const numbers = [52, 53, 49, 77, 21, 32];
+let minNumber = Math.min(...numbers); // использован spread-оператор для разворачивания массива
+let maxNumber = Math.max(...numbers); // использован spread-оператор для разворачивания массива
+
+console.log(`Минимальное число - ${minNumber}, максимальное - ${maxNumber}`);
+
