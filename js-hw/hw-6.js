@@ -66,3 +66,8 @@ function getRandomNumberInRange(num1, num2) {
 }
 
 console.log(getRandomNumberInRange(22, 38));
+
+// Задание 8. Выведите в консоль текущую дату
+
+now = new Date()
+console.log(now.toLocaleDateString());
