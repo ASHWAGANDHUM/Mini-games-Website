@@ -43,3 +43,16 @@ function getRandomNumber() {
 }
 
 getRandomNumber();
+
+// Задание 6. Написать функцию, которая принимает целое число и возвращает массив случайных чисел от 0 до этого числа. Длина массива должна быть в два раза меньше переданного числа.
+
+function arrLimitRandomNumbers(number) {
+    const arr = [];
+    for (let i = 0; (number / 2) > arr.length; i++) {
+        let randomNumber = Math.floor(Math.random() * number);
+        arr.push(randomNumber);
+    }
+    return arr;
+}
+
+console.log(arrLimitRandomNumbers(12));
