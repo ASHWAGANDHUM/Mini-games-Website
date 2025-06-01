@@ -46,3 +46,13 @@ let currentDate = new Date();
 
 let timerId = setInterval (() => { console.log(currentDate); }, 3000);
 setTimeout(() => { clearInterval(timerId); console.log('30 секунд прошло'); }, 1000 * 30);
+
+// Задание 4. Сейчас код ниже выводит в консоль «Привет, Глеб!» сразу после запуска. Допишите функцию delayForSecond так, чтобы приветствие выводилось в консоль не сразу, а спустя 1 секунду. Используйте setTimeout.
+
+function delayForSecond(callback) {
+    setTimeout(() => { callback() }, 1000 );
+}
+
+delayForSecond(function () {
+   console.log('Привет, Глеб!');
+})
