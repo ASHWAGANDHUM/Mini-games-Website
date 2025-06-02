@@ -247,3 +247,5 @@ function rockPaperScissorsGame() {
     alert(`К сожалению, ты проиграл!\n\nТвой счёт: ${userWinCount}\nСчёт компьютера: ${aiWinCount}`);
   } else {
     alert(`Ничья!\n\nТвой счёт: ${userWinCount}\nСчёт компьютера: ${aiWinCount}`);
+  }
+}
