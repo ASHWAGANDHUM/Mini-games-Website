@@ -7,7 +7,7 @@ const arr = [1, 5, 4, 10, 0, 3];
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
     if (arr[i] === 10) {
-        break
+        break;
     }
 }
 
@@ -24,7 +24,7 @@ console.log(`${position}`);
 // С помощью метода join выведите элементы массива через пробел (пустую строку ' ').
 
 const numbs = [1, 3, 5, 10, 20];
-let joinNumbs = numbs.join(" ")
+let joinNumbs = numbs.join(" ");
 console.log(joinNumbs);
 
 // Задание 4
@@ -65,15 +65,15 @@ console.log(filteredArr);
 // Задание 7
 // Дан массив: [9, 8, 7, 6, 5].
 
-// const guessArr = [9, 8, 7, 6, 5];
-// let guessNumber = Number(prompt('Угадай число, находящееся внутри массива.'))
-// let answer = guessArr.includes(guessNumber);
+const guessArr = [9, 8, 7, 6, 5];
+let guessNumber = Number(prompt('Угадай число, находящееся внутри массива.'))
+let answer = guessArr.includes(guessNumber);
 
-// if (answer) {
-//     alert('Угадал')
-// } else {
-//     alert('Не угадал')
-// }
+if (answer) {
+    alert('Угадал')
+} else {
+    alert('Не угадал')
+}
 
 // Задание 8
 // Дана строка: 'abcdef'. Выведите в консоль 'fedcba'.
