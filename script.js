@@ -89,9 +89,9 @@ function simpleArithmetic() {
       return;
     }
     if (isNaN(userAnswer) || userAnswer === '') {
-    alert('Нужно ввести число! Попробуй ещё раз.');
-    i--; // не учитывать итерацию
-    continue;
+      alert('Нужно ввести число! Попробуй ещё раз.');
+      i--; // не учитывать итерацию
+      continue;
     }
 
     userAnswer = Number(userAnswer); // преобразование переменной в числовой тип данных, доселе являвшейся строчной (для null, проверок на NaN и пустую строку)
@@ -188,5 +188,64 @@ function easyQuizGame() {
     alert('К сожалению, ты не ответил ни на один вопрос =(');
   } else {
     alert(`Ты ответил на ${countCorrectAnswers} вопроса из ${quiz.length}.`);
+  }
+}
+
+// ИГРА 5 - КАМЕНЬ, НОЖНИЦЫ, БУМАГА
+
+function rockPaperScissorsGame() {
+
+  const choiceArr = ['камень', 'ножницы', 'бумага'];  // массив с вариантами ответа
+
+  let userWinCount = 0; // счётчик побед пользователя
+  let aiWinCount = 0; // счётчик побед компьютера
+  // callback-функция для получения результата, принимающая выбор пользователя и компьютера в качестве аргументов
+  const getResult = (userChoice, aiChoice) => {
+    if (userChoice === aiChoice) {
+      return 'Ничья';
+    }
+    if (
+      (userChoice === 'камень' && aiChoice === 'ножницы') ||
+      (userChoice === 'ножницы' && aiChoice === 'бумага') ||
+      (userChoice === 'бумага' && aiChoice === 'камень')
+    ) {
+      return 'Победа';
+    }
+    return 'Поражение'; // в случае исключения остальных вариантов условий
+  };
+
+  for (let i = 0; i < 5; i++) {  // цикл из 5 итераций (5 раундов игры)
+    let aiChoice = choiceArr[Math.floor(Math.random() * choiceArr.length)]; // рандомный выбор компьютера
+    let userChoice = prompt(`Сделай выбор: ${choiceArr.join(', ')}.`); // выбор пользователя
+
+    if (userChoice === null) { // При нажатии Отмена или Esc
+      alert("Игра окончена.");
+      return;
+    }
+
+    userChoice = userChoice.toLowerCase(); // приведение пользовательского ответа к нижнему регистру
+
+    if (!choiceArr.includes(userChoice)) { // проверка на корректность выбора
+      alert('Тебе нужно выбрать один из вариантов!');
+      i--; // не учитывать итерацию
+      continue;
+    }
+
+    const result = getResult(userChoice, aiChoice); // возвращение результата
+    alert(`Ты выбрал ${userChoice}.\nКомпьютер выбрал ${aiChoice}.\n\n${result}!`);
+
+    if (result === 'Победа') {
+      userWinCount++; // очко в зачёт пользователя
+    } else if (result === 'Поражение') {
+      aiWinCount++; // очко в зачёт компьютера
+    }
+  }
+  // подведение итогов
+  if (userWinCount > aiWinCount) {
+    alert(`Поздравляю, ты победил!\n\nТвой счёт: ${userWinCount}\nСчёт компьютера: ${aiWinCount}`);
+  } else if (userWinCount < aiWinCount) {
+    alert(`К сожалению, ты проиграл!\n\nТвой счёт: ${userWinCount}\nСчёт компьютера: ${aiWinCount}`);
+  } else {
+    alert(`Ничья!\n\nТвой счёт: ${userWinCount}\nСчёт компьютера: ${aiWinCount}`);
   }
 }
