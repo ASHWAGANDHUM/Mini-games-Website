@@ -56,3 +56,24 @@ function delayForSecond(callback) {
 delayForSecond(function () {
    console.log('Привет, Глеб!');
 })
+
+// Задание 5. Посмотрите код. В нём допущена ошибка, и он выводит сообщения не в том порядке:
+
+// Функция delayForSecond через 1 секунду пишет в консоль «Прошла одна секунда», а затем вызывает переданный колбэк
+
+function delayForSecondWithMistake(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
+}
+
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
+
+// Код выше менять нельзя
+
+// Нужно изменить код ниже:
+delayForSecondWithMistake(() => sayHi('Филипп'));
