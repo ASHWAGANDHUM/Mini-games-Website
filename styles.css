@@ -87,7 +87,7 @@ a {
   animation-iteration-count: infinite;
 }
 .stripe:hover {
-  animation: none;
+  animation-play-state: paused;
 }
 .stripe__text {
   color: #202027;
