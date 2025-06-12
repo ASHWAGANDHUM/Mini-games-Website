@@ -59,3 +59,13 @@ btnAddEl.addEventListener('click', () => {
     newEl.textContent = 'Текст в конце документа';
     document.body.appendChild(newEl);
 });
+
+// Задание 7. Удаление элемента
+// Задача: создайте кнопку, которая удаляет первый элемент <p> с классом description.
+
+const descEl = document.querySelector('.desc-text');
+const btnRemoveEl = document.querySelector('.btn-remove');
+
+btnRemoveEl.addEventListener('click', () => {
+    descEl.remove();
+});
