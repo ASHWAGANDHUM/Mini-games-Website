@@ -4,9 +4,6 @@
 const headingEl = document.querySelector('.heading');
 const btnEl = document.querySelector('.btn-hidden');
 
-console.log(headingEl);
-console.log(btnEl);
-
 btnEl.addEventListener('click', () => {
     headingEl.classList.toggle('text_hidden');
 });
@@ -30,4 +27,15 @@ const btnChangeText = document.querySelector('.btn-change-text');
 
 btnChangeText.addEventListener('click', () => {
     titleEl.textContent = 'Привет мир!';
+});
+
+// Задание 4. Поиск и изменение элементов по классу
+// Задача: найдите все элементы с классом description и измените их текст на «Измененный текст».
+
+
+const allDescEl = document.querySelectorAll('.description');
+const btnChangeDesc = document.querySelector('.btn-change-all');
+
+btnChangeDesc.addEventListener('click', () => {
+    allDescEl.forEach((element) => element.textContent = 'Измененный текст');
 });
