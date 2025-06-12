@@ -14,15 +14,20 @@ btnEl.addEventListener('click', () => {
 // Задание 2. Изменение стиля элемента
 // Задача: создайте кнопку, которая изменяет цвет текста в элементе <p>.
 
-// Инструкция:
-
-// В HTML создайте абзац <p> и кнопку. Используйте метод querySelector для получения ссылки на абзац и кнопку. Используйте событие click и метод addEventListener, чтобы изменить стиль элемента, например его цвет.
-
-// Как должно работать: нажатие на кнопку «Изменить цвет» делает текст абзаца синим.
-
 const textEl = document.querySelector('.text');
 const btnColor = document.querySelector('.btn-change-color');
 
 btnColor.addEventListener('click', () => {
     textEl.style.color = 'blue';
+});
+
+// Задание 3. Динамическое изменение текста
+// Задача: создайте кнопку, которая меняет текст в заголовке <h1>.
+
+
+const titleEl = document.querySelector('.title');
+const btnChangeText = document.querySelector('.btn-change-text');
+
+btnChangeText.addEventListener('click', () => {
+    titleEl.textContent = 'Привет мир!';
 });
