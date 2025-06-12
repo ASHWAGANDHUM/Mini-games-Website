@@ -249,3 +249,10 @@ function rockPaperScissorsGame() {
     alert(`Ничья!\n\nТвой счёт: ${userWinCount}\nСчёт компьютера: ${aiWinCount}`);
   }
 }
+
+const gameButton = document.querySelectorAll('.game__button');
+gameButton[0].addEventListener('click', guessNumberGame);
+gameButton[1].addEventListener('click', simpleArithmetic);
+gameButton[2].addEventListener('click', reverseTextGame);
+gameButton[3].addEventListener('click', rockPaperScissorsGame);
+gameButton[4].addEventListener('click', easyQuizGame);
