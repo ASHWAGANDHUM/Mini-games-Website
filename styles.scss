@@ -80,13 +80,12 @@ a {
     flex-wrap: nowrap;
     gap: 51px;
     align-items: center;
-    // overflow-x: hidden;
     animation-name: scroll-left;
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     &:hover {
-        animation: none;
+        animation-play-state: paused;
     }
     &__text {
         color: $color-base;
