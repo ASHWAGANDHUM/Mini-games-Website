@@ -32,10 +32,19 @@ btnChangeText.addEventListener('click', () => {
 // Задание 4. Поиск и изменение элементов по классу
 // Задача: найдите все элементы с классом description и измените их текст на «Измененный текст».
 
+const allDescritionEl = document.querySelectorAll('.description');
+const btnChangeDescription = document.querySelector('.btn-change-all');
 
-const allDescEl = document.querySelectorAll('.description');
-const btnChangeDesc = document.querySelector('.btn-change-all');
+btnChangeDescription.addEventListener('click', () => {
+    allDescritionEl.forEach((element) => element.textContent = 'Измененный текст');
+});
 
-btnChangeDesc.addEventListener('click', () => {
-    allDescEl.forEach((element) => element.textContent = 'Измененный текст');
+// Задание 5. Работа с querySelectorAll
+// Задача: создайте несколько элементов <p> с разными классами. Используйте querySelectorAll , чтобы найти все элементы с классом description и изменить их текст.
+
+const someDescEl = document.querySelectorAll('.desc');
+const btnChangeDescEl = document.querySelector('.btn-change-desc');
+
+btnChangeDescEl.addEventListener('click', () => {
+    someDescEl.forEach((element) => element.textContent = 'Новый текст');
 });
