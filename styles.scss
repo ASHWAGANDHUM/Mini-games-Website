@@ -67,6 +67,11 @@ a {
         }
     }
 }
+.stripe-wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: $color-stripe;
+}
 .stripe {
     background-color: $color-stripe;
     padding: 27px 18px;
@@ -75,7 +80,14 @@ a {
     flex-wrap: nowrap;
     gap: 51px;
     align-items: center;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    animation-name: scroll-left;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    &:hover {
+        animation: none;
+    }
     &__text {
         color: $color-base;
         font-size: 30px;
@@ -250,6 +262,15 @@ a {
         font-weight: 600;
         line-height: 29px;
         text-align: center;
+    }
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-46%);
     }
 }
 
