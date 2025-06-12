@@ -48,3 +48,14 @@ const btnChangeDescEl = document.querySelector('.btn-change-desc');
 btnChangeDescEl.addEventListener('click', () => {
     someDescEl.forEach((element) => element.textContent = 'Новый текст');
 });
+
+// Задание 6. Добавление нового элемента в DOM
+// Задача: создайте кнопку, которая добавляет новый элемент <p> с текстом в конец документа.
+
+const btnAddEl = document.querySelector('.btn-add-el');
+
+btnAddEl.addEventListener('click', () => {
+    const newEl = document.createElement('p')
+    newEl.textContent = 'Текст в конце документа';
+    document.body.appendChild(newEl);
+});
