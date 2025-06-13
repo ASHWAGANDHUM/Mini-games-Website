@@ -252,7 +252,7 @@ function rockPaperScissorsGame() {
 
 // ИГРА 6 - ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ
 function changeBackgroundColorGame() {
-  const colors = ['#F25050', '#00C1FF', '#99D100', '#FFC700', '#FF6D00', '#565EEF', '#AD61FF', '#D9B6FF', '#1FA46C'];
+  const colors = ['#F25050', '#00C1FF', '#99D100', '#FFC700', '#FF6D00', '#565EEF', '#AD61FF', '#D9B6FF', '#1FA46C', '#A4E5E0'];
   const index = Math.floor(Math.random() * colors.length);
   const randomColor = colors[index];
   const backGround = document.querySelector('.games');
