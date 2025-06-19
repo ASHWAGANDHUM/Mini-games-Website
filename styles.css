@@ -67,6 +67,12 @@ a {
   color: #202027;
 }
 
+.stripe-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #BCEC30;
+}
+
 .stripe {
   background-color: #BCEC30;
   padding: 27px 18px;
@@ -75,7 +81,13 @@ a {
   flex-wrap: nowrap;
   gap: 51px;
   align-items: center;
-  overflow-x: hidden;
+  animation-name: scroll-left;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.stripe:hover {
+  animation-play-state: paused;
 }
 .stripe__text {
   color: #202027;
@@ -252,6 +264,14 @@ a {
   text-align: center;
 }
 
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-46%);
+  }
+}
 @media (max-width: 767px) {
   .center {
     padding-left: 16px;
@@ -290,7 +310,6 @@ a {
     line-height: 141.69%;
   }
   .stripe {
-    overflow-x: hidden;
     padding: 17px 18px;
     gap: 27px;
   }
@@ -370,6 +389,11 @@ a {
     font-weight: 600;
     line-height: 20px;
     text-align: center;
+  }
+  @keyframes scroll-left {
+    to {
+      transform: translateX(-300%);
+    }
   }
 }
 @media (min-width: 768px) and (max-width: 1214px) {
