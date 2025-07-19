@@ -249,3 +249,20 @@ function rockPaperScissorsGame() {
     alert(`Ничья!\n\nТвой счёт: ${userWinCount}\nСчёт компьютера: ${aiWinCount}`);
   }
 }
+
+// ИГРА 6 - ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ
+function changeBackgroundColorGame() {
+  const colors = ['#F25050', '#00C1FF', '#99D100', '#FFC700', '#FF6D00', '#565EEF', '#AD61FF', '#D9B6FF', '#1FA46C', '#A4E5E0'];
+  const index = Math.floor(Math.random() * colors.length);
+  const randomColor = colors[index];
+  const backGround = document.querySelector('.games');
+  backGround.style.backgroundColor = `${randomColor}`;
+}
+
+const gameButton = document.querySelectorAll('.game__button');
+gameButton[0].addEventListener('click', guessNumberGame);
+gameButton[1].addEventListener('click', simpleArithmetic);
+gameButton[2].addEventListener('click', reverseTextGame);
+gameButton[3].addEventListener('click', rockPaperScissorsGame);
+gameButton[4].addEventListener('click', easyQuizGame);
+gameButton[5].addEventListener('click', changeBackgroundColorGame);
