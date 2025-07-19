@@ -69,8 +69,3 @@ const btnRemoveEl = document.querySelector('.btn-remove');
 btnRemoveEl.addEventListener('click', () => {
     descEl.remove();
 });
-
-const btnEl = document.querySelector('.myButton');
-document.addEventListener('click', function (e) {
-    alert('Ура! Вы нажали на кнопку!');
-});
